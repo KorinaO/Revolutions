@@ -2,7 +2,7 @@ body {
   background-color: rgb(26, 25, 25);
   color: white;
   margin: 0;
-  padding-top: 120px;
+  padding-top: 115px;
 }
 
 header {
@@ -12,8 +12,8 @@ header {
   z-index: 1200;
 }
 
-.btn-dark{
-font-size: 1.1rem;
+.btn-dark {
+  font-size: 1.1rem;
 }
 
 .btn-dark img {
@@ -47,6 +47,7 @@ font-size: 1.1rem;
   z-index: 1100;
 }
 
+
 main {
   background-color: rgb(25, 25, 26);
 }
@@ -71,7 +72,6 @@ main {
 .nav-tabs .nav-link img {
   width: 20px;
   height: 20px;
-
   filter: brightness(0) saturate(100%) invert(50%) sepia(0%) saturate(0%) hue-rotate(0deg);
   opacity: 1;
 }
@@ -79,4 +79,15 @@ main {
 .nav-tabs .nav-link.active img {
   filter: brightness(0) invert(1);
   opacity: 1;
+}
+
+.dropdown-label img {
+  filter: brightness(0) invert(1);
+  width: 20px;
+  height: 20px;
+}
+
+.card-body {
+  margin: 0px 0px 0px 20px;
+  padding: 0;
 }
