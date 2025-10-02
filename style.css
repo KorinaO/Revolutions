@@ -1,0 +1,27 @@
+body {
+  background-color: black;
+  color: white;
+  padding-top: 140px;
+}
+
+header {
+  padding-top: 10px;
+  background-color: black;
+}
+nav {
+  margin-top: 80px;
+  background-color: black;
+}
+
+.dropdown-label {
+  padding: 0.25rem 0.75rem;
+  text-decoration: none;
+}
+
+.dropdown-label:hover {
+  text-decoration: underline;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
