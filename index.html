@@ -5,7 +5,7 @@
   <!--
 		@author Korina Joy Olegario
     
-    Revolutions, the table-top roleplaying game, is made by Game Devloper, LobsterKarian.
+    Revolutions, the table-top roleplaying game, is made by Game Developer, LobsterKarian.
 
 		October 01, 2025 | Revolutions Portfolio	
 	-->
@@ -34,14 +34,13 @@
           <div class="d-flex align-items-center justify-content-end gap-2">
             <div class="input-group" style="max-width: 250px;">
               <input type="text" class="form-control" placeholder="Search...">
-              <button type="button" class="btn btn-dark">🔍︎</button>
+              <button type="button" class="btn btn-dark"><img src="media/magnifying-glass-solid-full.svg"
+                  alt="icon_search"></button></button>
             </div>
             <!-- First dropdown button with 🕮 -->
             <div class="dropdown">
               <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownBook" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                🕮
-              </button>
+                aria-expanded="false"><img src="media/book-solid-full.svg" alt="icon_book"></button>
               <ul class="dropdown-menu" aria-labelledby="dropdownBook">
                 <li><a class="dropdown-item"
                     href="https://docs.google.com/document/d/14_VXDTur_AzNXsY99bxCQP14cgT-qN92ukXS3IBouQ8/edit?usp=sharing"
@@ -121,27 +120,42 @@
   <main> <!--------------------------------------Main-->
     <div id="div_main" class="container-md">
       <div data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0" class="scrollspy-example" tabindex="0">
-        <h4>First heading</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum maximus pharetra porttitor. Curabitur
-          luctus venenatis diam vel sollicitudin. Proin feugiat lorem at nisl sagittis sodales. Sed mattis aliquet
-          ultrices. Donec sem est, gravida vitae neque in, congue lacinia risus. Vivamus id interdum turpis. Fusce
-          faucibus enim est, et aliquam leo gravida id. Fusce et nisi quam. Mauris accumsan tempor quam, vel ornare
-          libero. Sed non tortor molestie, accumsan lectus ac, volutpat sapien. Donec sit amet augue sit amet nibh
-          accumsan fringilla. Mauris at viverra massa. Quisque ornare diam eu mauris volutpat mattis. Integer egestas
-          nisl id neque sollicitudin vulputate. Cras consequat ullamcorper auctor.</p>
-        <h4>Second heading</h4>
-        <p>Praesent et quam cursus, scelerisque felis mattis, tincidunt velit. Sed ullamcorper est vitae turpis euismod
-          consectetur. Donec nec fringilla arcu, et varius velit. Integer luctus vel nisl id viverra. Ut commodo mi ac
-          dui tincidunt rutrum. Duis in dolor vel massa tincidunt dictum sit amet ac diam. Nam leo felis, blandit sed
-          consectetur condimentum, aliquam in urna. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
-          per inceptos himenaeos. Sed sit amet efficitur diam, molestie fermentum sem. Mauris ac nunc lorem. Duis in
-          porta mauris.</p>
-        <h4>Third heading</h4>
-        <p>Praesent risus enim, finibus et maximus eu, dictum a nibh. Fusce eu eros eget massa tempus rhoncus ut sit
-          amet urna. Vivamus at faucibus mi. Pellentesque interdum pretium congue. Suspendisse elit dolor, fringilla a
-          orci et, sollicitudin sollicitudin nibh. Aenean ut blandit velit, a sollicitudin dolor. Suspendisse ante
-          dolor, porttitor id egestas rhoncus, facilisis id justo. Vestibulum ante ipsum primis in faucibus orci luctus
-          et ultrices posuere cubilia curae; Nulla quis sodales erat.</p>
+
+        <!-- Tabs -->
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link active" id="list-tab" data-bs-toggle="tab" href="#characterList" role="tab">Character
+              List</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="builder-tab" data-bs-toggle="tab" href="#characterBuilder" role="tab"><img
+                src="media/plus-solid-full.svg" alt="icon_plus"></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="parties-tab" data-bs-toggle="tab" href="#characterParties" role="tab"><img
+                src="media/users-solid-full.svg" alt="icon_users"></a>
+          </li>
+        </ul>
+
+        <!-- Tab Contents -->
+        <div class="tab-content mt-3">
+          <div class="tab-pane fade show active" id="characterList" role="tabpanel" aria-labelledby="list-tab">
+            <div class="card card-body">
+              Content for Character List
+            </div>
+          </div>
+          <div class="tab-pane fade" id="characterBuilder" role="tabpanel" aria-labelledby="builder-tab">
+            <div class="card card-body">
+              Build new character
+            </div>
+          </div>
+          <div class="tab-pane fade" id="characterParties" role="tabpanel" aria-labelledby="parties-tab">
+          <div class="card card-body">
+              Parties list
+            </div>
+          </div>
+        </div>
+
       </div>
       <button id="floatingBtn" class="btn btn-primary">+</button>
     </div>
@@ -159,4 +173,3 @@
 </body>
 
 </html>
-
