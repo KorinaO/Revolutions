@@ -138,20 +138,37 @@
         </ul>
 
         <!-- Tab Contents -->
-        <div class="tab-content mt-3">
+        <div class="tab-content mt-1">
           <div class="tab-pane fade show active" id="characterList" role="tabpanel" aria-labelledby="list-tab">
             <div class="card card-body">
-              Content for Character List
+              
+              <div class="row"> <!--Sort view-->
+                <div class="col text-end">
+                <span class="dropdown-label" data-bs-toggle="dropdown" aria-expanded="false"><img
+                    src="media/arrow-down-wide-short-solid-full.svg" alt="icon_users"></span>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Sort A-Z</a></li>
+                  <li><a class="dropdown-item" href="#">Sort Z-A</a></li>
+                  <li><a class="dropdown-item" href="#">Sort by Level</a></li>
+                  <li><a class="dropdown-item" href="#">Sort by Story</a></li>
+                </ul>
+                </div>
+              </div>
+
+              <div class="row"><!--Characters go here-->
+                List of characters
+              </div>
+
             </div>
           </div>
           <div class="tab-pane fade" id="characterBuilder" role="tabpanel" aria-labelledby="builder-tab">
             <div class="card card-body">
-              Build new character
+              Build a new character
             </div>
           </div>
           <div class="tab-pane fade" id="characterParties" role="tabpanel" aria-labelledby="parties-tab">
-          <div class="card card-body">
-              Parties list
+            <div class="card card-body">
+              List of parties
             </div>
           </div>
         </div>
@@ -173,4 +190,3 @@
 </body>
 
 </html>
-
