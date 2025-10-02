@@ -16,6 +16,12 @@ header {
 font-size: 1.1rem;
 }
 
+.btn-dark img {
+  filter: brightness(0) invert(1);
+  width: 20px;
+  height: 20px;
+}
+
 #div_nav {
   padding: 15px 0px 0px;
   max-width: 412px
@@ -43,4 +49,34 @@ font-size: 1.1rem;
 
 main {
   background-color: rgb(25, 25, 26);
+}
+
+
+/**-----------------Tabs and Cards*/
+.card {
+  background-color: rgb(25, 25, 26);
+  color: white;
+}
+
+.nav-tabs .nav-link {
+  color: grey;
+}
+
+.nav-tabs .nav-link.active {
+  color: white;
+  background-color: rgb(17, 17, 17);
+  border-color: #dee2e6 #dee2e6 rgb(17, 17, 17);
+}
+
+.nav-tabs .nav-link img {
+  width: 20px;
+  height: 20px;
+
+  filter: brightness(0) saturate(100%) invert(50%) sepia(0%) saturate(0%) hue-rotate(0deg);
+  opacity: 1;
+}
+
+.nav-tabs .nav-link.active img {
+  filter: brightness(0) invert(1);
+  opacity: 1;
 }
