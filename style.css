@@ -1,20 +1,28 @@
 body {
-  background-color: black;
+  background-color: rgb(26, 25, 25);
   color: white;
-  padding-top: 140px;
+  margin: 0;
+  padding-top: 120px;
 }
 
 header {
-  padding-top: 10px;
-  background-color: black;
+  position: sticky;
+  padding: 10px 0px 10px;
+  background-color: rgb(17, 17, 17);
+  z-index: 1200;
 }
-nav {
-  margin-top: 80px;
-  background-color: black;
+
+.btn-dark{
+font-size: 1.1rem;
+}
+
+#div_nav {
+  padding: 15px 0px 0px;
+  max-width: 412px
 }
 
 .dropdown-label {
-  padding: 0.25rem 0.75rem;
+  padding: 0.15rem 0.75rem;
   text-decoration: none;
 }
 
@@ -24,4 +32,15 @@ nav {
 
 .dropdown-toggle::after {
   display: none;
+}
+
+#floatingBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1100;
+}
+
+main {
+  background-color: rgb(25, 25, 26);
 }
