@@ -2,26 +2,36 @@ body {
   background-color: rgb(26, 25, 25);
   color: white;
   margin: 0;
-  padding-top: 115px;
+  padding-top: 105px;
 }
 
 header {
   position: sticky;
-  padding: 10px 0px 10px;
+  top: 0;
+  padding: 10px 0;
   background-color: rgb(17, 17, 17);
   z-index: 1200;
+  transition: transform 0.3s ease-in-out; /* Smooth hide/show */
 }
 
-.btn-dark {
-  font-size: 1.1rem;
+body.scrolling-down header {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
 }
 
-.btn-dark img {
+body.scrolling-up header {
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+/**Header buttons*/
+header .btn-dark img {
   filter: brightness(0) invert(1);
   width: 20px;
   height: 20px;
 }
 
+/**Nav buttons*/
 #div_nav {
   padding: 15px 0px 0px;
   max-width: 412px
@@ -40,13 +50,24 @@ header {
   display: none;
 }
 
+/**Floating Button*/
 #floatingBtn {
   position: fixed;
   bottom: 20px;
   right: 20px;
   z-index: 1100;
+  width: 40px;       /* button width */
+  height: 40px;      /* button height */
+  background: transparent;
+  border: none;
+  padding: 0;        /* remove internal padding */
 }
 
+#floatingBtn img {
+  width: 100%;       /* fill the button exactly */
+  height: 100%;
+  object-fit: contain; /* maintain aspect ratio */
+}
 
 main {
   background-color: rgb(25, 25, 26);
@@ -63,12 +84,14 @@ main {
   color: grey;
 }
 
+/* Active outer tab */
 .nav-tabs .nav-link.active {
   color: white;
   background-color: rgb(17, 17, 17);
   border-color: #dee2e6 #dee2e6 rgb(17, 17, 17);
 }
 
+/* Outer tab icons */
 .nav-tabs .nav-link img {
   width: 20px;
   height: 20px;
@@ -81,13 +104,143 @@ main {
   opacity: 1;
 }
 
+/* Nested tabs Dropdown label icons */
 .dropdown-label img {
   filter: brightness(0) invert(1);
   width: 20px;
   height: 20px;
 }
 
+/* === CHARACTER BUILDER BUTTONS === */
+.buttons-builder {
+  display: flex;
+  justify-content: flex-end; /* push buttons to the right */
+  align-items: center;       /* vertically center them */
+  gap: 0.5rem;               /* even spacing between buttons */
+}
+
+.buttons-builder .btn-dark {
+  background: transparent;
+  border: none;
+  padding: 0px 5px 5px;
+}
+
+.buttons-builder .btn-dark img  {
+  filter: brightness(0) saturate(100%) invert(50%) sepia(0%) saturate(0%) hue-rotate(0deg);
+  width: 20px;
+  height: 20px;
+}
+
+.buttons-builder .btn-dark img:hover  {
+  filter: brightness(0) invert(1);
+}
+
+input.newCharacter-name {
+    background: transparent;      /* Remove background */
+    border: none;                 /* Remove all borders */
+    border-bottom: 1px solid grey; /* Only bottom border as underline */
+    color: white;                 /* Text color */
+    padding: 4px 0;               /* Optional: adjust vertical padding */
+    outline: none;                /* Remove focus outline */
+    width: 100%;                  /* Fill parent width */
+    font-size: 1rem;              /* Adjust font size if needed */
+}
+
 .card-body {
-  margin: 0px 0px 0px 20px;
+  margin: 0px 10px 0px 10px;
   padding: 0;
+}
+
+/* ===== Nested Tabs Styling - Evenly Spaced ===== */
+.nested-tabs .nav-tabs {
+  display: flex;                   /* Flex container */
+  justify-content: space-between;  /* Evenly spread tabs */
+  gap: 1rem;   
+  border-bottom: none;             /* Remove default border */
+  padding: 0;                      /* Remove padding */
+  margin: 10px 0px 0px 0px;         
+  width: 100%;                     /* Full width */
+  list-style: none;                /* Remove bullets */
+}
+
+.nested-tabs .nav-link {
+  display: block;                  /* Full clickable area */
+  width: 100%;                     /* Stretch to fill flex item */
+  padding: 0.5rem 0;               /* Only vertical padding */
+  border: none;                    /* Remove border */
+  background: transparent;         /* Transparent background */
+  color: #aaa;                     /* Inactive tab color */
+  position: relative;
+  transition: color 0.25s ease;
+  box-sizing: border-box;          /* Ensure width includes padding/border */
+}
+
+/* Active tab styling */
+.nested-tabs .nav-link.active {
+  color: #fff;                     /* Active tab text color */
+  background: transparent;
+}
+
+/* Underline for active tab */
+.nested-tabs .nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 1px;
+  transition: all 0.25s ease;
+}
+
+/* Hover effect */
+.nested-tabs .nav-link:hover {
+  color: #fff;
+}
+
+.nested-tabs .nav-link:hover::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 1px;
+}
+
+/* ===== FORMS ===== */
+.col-auto {
+  display: flex;
+  align-items: center;
+}
+
+/**growth image*/
+.growth-radio-btns {
+  display: flex;
+  flex-wrap: wrap;      /* Allow buttons to wrap on smaller screens */
+  justify-content: center;
+ 
+}
+
+.card-body .btn-check + label {
+  margin-right: 8px;  /* Space between buttons horizontally */
+  margin-bottom: 10px; /* Space when wrapping to the next line */
+}
+
+.btn-secondary img {
+  filter: brightness(0) invert(1);
+  width: 50px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.btn-secondary {
+  opacity: 0.5;
+}
+
+.btn-secondary:hover {
+  opacity: 1;
 }
