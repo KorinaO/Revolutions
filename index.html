@@ -128,7 +128,7 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" id="builder-tab" data-bs-toggle="tab" href="#characterBuilder" role="tab">
-            <img src="media/plus-solid-full.svg" alt="icon_plus">
+            <img src="media/user-plus-solid-full.svg" alt="icon_plus">
           </a>
         </li>
         <li class="nav-item">
@@ -139,25 +139,78 @@
       </ul>
 
       <div class="tab-content mt-1">
-
         <!-- Character List -->
         <div class="tab-pane fade show active" id="characterList" role="tabpanel" aria-labelledby="list-tab">
           <div class="card card-body">
-            <div class="row text-end mb-2">
-              <span class="dropdown-label" data-bs-toggle="dropdown" aria-expanded="false">
-                <img src="media/arrow-down-wide-short-solid-full.svg" alt="icon_users">
-              </span>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Sort A-Z</a></li>
-                <li><a class="dropdown-item" href="#">Sort Z-A</a></li>
-                <li><a class="dropdown-item" href="#">Sort by Level</a></li>
-                <li><a class="dropdown-item" href="#">Sort by Story</a></li>
-              </ul>
+            <div class="d-flex justify-content-between align-items-end mb-2">
+              <span>Character List</span>
+              <div class="dropdown">
+                <span class="dropdown-label" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="media/arrow-down-wide-short-solid-full.svg" alt="icon_users">
+                </span>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="#">Sort A-Z</a></li>
+                  <li><a class="dropdown-item" href="#">Sort Z-A</a></li>
+                  <li><a class="dropdown-item" href="#">Sort by Level</a></li>
+                  <li><a class="dropdown-item" href="#">Sort by Story</a></li>
+                </ul>
+              </div>
             </div>
 
-            <div class="row">
-              <p>List of Characters</p>
+            <div class="row"><!-- Actual Characters -->
+              <!-- TIGER -->
+              <div class="character-card card bg-dark text-white">
+                <img src="media/pc-tiger.jpg" class="card-img" alt="character-tiger">
+                <!-- Overlay with flex layout -->
+                <div class="card-img-overlay d-flex flex-column justify-content-end">
+                  <div class="d-flex justify-content-between align-items-end">
+                    <div>
+                      <h5 class="card-title mb-0">Crouching Tiger</h5>
+                      <p class="card-text mb-0">Marshall 18</p>
+                    </div>
+                    <!-- Dropdown at bottom right -->
+                    <div class="dropdown character-options">
+                      <span class="dropdown-label" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="media/ellipsis-vertical-solid-full.svg" alt="icon_settings">
+                      </span>
+                      <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#">Edit</a></li>
+                        <li><a class="dropdown-item" href="#">Copy</a></li>
+                        <li><a class="dropdown-item" href="#">Add to Party</a></li>
+                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ADAM -->
+              <div class="character-card card bg-dark text-white">
+                <img src="media/pc-adam.jpg" class="card-img" alt="character-tiger">
+                <!-- Overlay with flex layout -->
+                <div class="card-img-overlay d-flex flex-column justify-content-end">
+                  <div class="d-flex justify-content-between align-items-end">
+                    <div>
+                      <h5 class="card-title mb-0">Adam Dallas Bouvet</h5>
+                      <p class="card-text mb-0">Tracker 15</p>
+                    </div>
+                    <!-- Dropdown at bottom right -->
+                    <div class="dropdown character-options">
+                      <span class="dropdown-label" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="media/ellipsis-vertical-solid-full.svg" alt="icon_settings">
+                      </span>
+                      <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#">Edit</a></li>
+                        <li><a class="dropdown-item" href="#">Copy</a></li>
+                        <li><a class="dropdown-item" href="#">Add to Party</a></li>
+                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </div>
+
           </div>
         </div>
 
@@ -165,9 +218,6 @@
         <div class="tab-pane fade" id="characterBuilder" role="tabpanel" aria-labelledby="builder-tab">
           <div class="card card-body">
             <div class="row">
-              <div class="col">
-                <input type="text" class="newCharacter-name" placeholder="New name..." aria-label="Charactername">
-              </div>
               <div class="col">
                 <!-- Builder Buttons-->
                 <div class="buttons-builder">
@@ -186,7 +236,11 @@
             <div class="nested-tabs">
               <ul class="nav nav-tabs">
                 <li class="nav-item">
-                  <a class="nav-link active" id="characterBuilder-growth-tab" data-bs-toggle="tab"
+                  <a class="nav-link active" id="characterBuilder-identity-tab" data-bs-toggle="tab"
+                    href="#characterBuilder-identity" role="tab">Identity</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="characterBuilder-growth-tab" data-bs-toggle="tab"
                     href="#characterBuilder-growth" role="tab">Growth</a>
                 </li>
                 <li class="nav-item">
@@ -198,10 +252,6 @@
                     href="#characterBuilder-artes" role="tab">Artes</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" id="characterBuilder-identity-tab" data-bs-toggle="tab"
-                    href="#characterBuilder-identity" role="tab">Identity</a>
-                </li>
-                <li class="nav-item">
                   <a class="nav-link" id="characterBuilder-gear-tab" data-bs-toggle="tab" href="#characterBuilder-gear"
                     role="tab">Gear</a>
                 </li>
@@ -209,8 +259,68 @@
 
               <!--  This tab-content wraps *all* nested panes -->
               <div class="tab-content mt-3">
+                <!-- IDENTITY -->
+                <div class="tab-pane fade show active" id="characterBuilder-identity" role="tabpanel"
+                  aria-labelledby="characterBuilder-identity-tab">
+
+                  <!-- Profile -->
+                  <div class="row">
+                    <div class="card text-center">
+                      <div class="card-header">
+                        Profile
+                      </div>
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-auto">
+                            <div class="input-group">
+                              <input type="file" class="d-none" id="inputGroupFile04" accept="image/*">
+                              <label for="inputGroupFile04" class="btn btn-outline-dark">
+                                <img src="media/image-solid-full.svg" alt="Upload Image">
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <input type="text" class="newCharacter-name" placeholder="New name..."
+                              aria-label="Charactername">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Traits -->
+                  <div class="row">
+                    <div class="card text-center">
+                      <div class="card-header">
+                        Traits
+                      </div>
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-auto">
+                            Add a trait
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Flaws -->
+                  <div class="row">
+                    <div class="card text-center">
+                      <div class="card-header">
+                        Flaws
+                      </div>
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-auto">
+                            Add a flaw
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
                 <!-- GROWTH -->
-                <div class="tab-pane fade show active" id="characterBuilder-growth" role="tabpanel"
+                <div class="tab-pane fade" id="characterBuilder-growth" role="tabpanel"
                   aria-labelledby="characterBuilder-growth-tab">
                   <form>
 
@@ -333,7 +443,7 @@
                             <div class="col">Hp: </div>
                             <div class="col">C-Hp: </div>
                             <div class="col">Sp: </div>
-                          </div>  
+                          </div>
                           <!-- Secondary attributes row II-->
                           <div class="row text-center">
                             <div class="col">Tp: </div>
@@ -342,15 +452,14 @@
                         </div>
                       </div>
                     </div>
-                    
+
                     <div class="row">
                       <div class="card text-center">
                         <div class="card-header">
                           Select Features
                         </div>
                         <div class="card-body">
-                          <div class="growth-features" data-bs-spy="scroll" data-bs-offset="0"
-                            tabindex="0">
+                          <div class="growth-features" data-bs-spy="scroll" data-bs-offset="0" tabindex="0">
                             <!--Growth features-->
                           </div>
                         </div>
@@ -363,8 +472,7 @@
                           Growth Abilities
                         </div>
                         <div class="card-body">
-                          <div class="growth-abilities" data-bs-spy="scroll" data-bs-offset="0"
-                            tabindex="0">
+                          <div class="growth-abilities" data-bs-spy="scroll" data-bs-offset="0" tabindex="0">
                             <!--Growth abilities-->
                           </div>
                         </div>
@@ -387,12 +495,6 @@
                   Artes selection.
                 </div>
 
-                <!-- IDENTITY -->
-                <div class="tab-pane fade" id="characterBuilder-identity" role="tabpanel"
-                  aria-labelledby="characterBuilder-identity-tab">
-                  Edit identity.
-                </div>
-
                 <!-- GEAR -->
                 <div class="tab-pane fade" id="characterBuilder-gear" role="tabpanel"
                   aria-labelledby="characterBuilder-gear-tab">
@@ -402,35 +504,35 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
 
-    <!-- Parties -->
-    <div class="tab-pane fade" id="characterParties" role="tabpanel" aria-labelledby="parties-tab">
-      <div class="card card-body">
-        <div class="row text-end mb-2">
-          <span class="dropdown-label" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="media/arrow-down-wide-short-solid-full.svg" alt="icon_users">
-          </span>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Sort A-Z</a></li>
-            <li><a class="dropdown-item" href="#">Sort Z-A</a></li>
-            <li><a class="dropdown-item" href="#">Sort by Level</a></li>
-            <li><a class="dropdown-item" href="#">Sort by Story</a></li>
-          </ul>
+        <!-- Parties -->
+        <div class="tab-pane fade" id="characterParties" role="tabpanel" aria-labelledby="parties-tab">
+          <div class="card card-body">
+            <div class="d-flex justify-content-between align-items-end mb-2">
+              <span>Parties List</span>
+              <div class="dropdown">
+                <span class="dropdown-label" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="media/arrow-down-wide-short-solid-full.svg" alt="icon_users">
+                </span>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="#">Sort A-Z</a></li>
+                  <li><a class="dropdown-item" href="#">Sort Z-A</a></li>
+                  <li><a class="dropdown-item" href="#">Sort by Level</a></li>
+                  <li><a class="dropdown-item" href="#">Sort by Story</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="row"></div>
+          </div>
         </div>
-        <div class="row">List of parties</div>
       </div>
-    </div>
 
+      <!-- Floating button -->
+      <button id="floatingBtn" class="btn btn-dark" data-bs-toggle="popover" data-bs-placement="left"
+        data-bs-trigger="focus" data-bs-content="You have unsaved changes.">
+        <img src="media/sia-ooh.png" alt="icon_status">
+      </button>
     </div>
-    </div>
-
-    <!-- Floating button -->
-    <button id="floatingBtn" class="btn btn-dark" data-bs-toggle="popover" data-bs-placement="left"
-      data-bs-trigger="focus" data-bs-content="You have unsaved changes.">
-      <img src="media/sia-ooh.png" alt="icon_status">
-    </button>
   </main>
   <footer> <!--------------------------------------Footer-->
     <div id="div_footer" class="container-md">
@@ -438,6 +540,7 @@
       <figure class="text-center">
         <figcaption class="figure-caption">
           <p>&#169; 2025, Korina Joy Olegario</p>
+          <p>Game Developer: LobsterKarian &#8226; Artists: Milluzty</p>
         </figcaption>
       </figure>
     </div>
