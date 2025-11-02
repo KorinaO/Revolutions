@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!--
+		@author Korina Joy Olegario
+    
+    Revolutions, the table-top roleplaying game, is made by Game Developer, LobsterKarian.
+
+		October 01, 2025 | Revolutions Portfolio	
+
+    This is the Skills page.
+	-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Revolutions - Skills</title>
+
+  <!--bootstrap links & scripts-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!--java and css link-->
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js" defer></script>
+</head>
+
+<body>
+  <header class="fixed-top">
+    <div id="div_header" class="container-md">
+      <div class="row align-items-center">
+        <div class="col-auto"><!-- Revolutions icon -->
+          <h1 class="mb-0">Revolutions</h1>
+        </div>
+        <div class="col"><!-- Search, Buttons -->
+          <div class="d-flex align-items-center justify-content-end gap-2">
+            <div class="input-group" style="max-width: 250px;">
+              <input type="text" class="form-control" placeholder="Search...">
+              <button type="button" class="btn btn-dark"><img src="media/magnifying-glass-solid-full.svg"
+                  alt="icon_search"></button></button>
+            </div>
+            <!-- First dropdown button with 🕮 -->
+            <div class="dropdown">
+              <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownBook" data-bs-toggle="dropdown"
+                aria-expanded="false"><img src="media/book-solid-full.svg" alt="icon_book"></button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownBook">
+                <li><a class="dropdown-item"
+                    href="https://docs.google.com/document/d/14_VXDTur_AzNXsY99bxCQP14cgT-qN92ukXS3IBouQ8/edit?usp=sharing"
+                    target="_blank" rel="noopener noreferrer">Revolutions Handbook</a></li>
+              </ul>
+            </div>
+
+            <!-- Second dropdown button with ⋮ -->
+            <div class="dropdown">
+              <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMore" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                ⋮
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMore">
+                <li><a class="dropdown-item" href="#">Backup</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><a class="dropdown-item" href="#">Help</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="div_nav" class="row align-items-center">
+        <div class="d-flex justify-content-start w-100">
+          <!-- Characters -->
+          <div class="dropdown">
+            <span class="dropdown-label" data-bs-toggle="dropdown" aria-expanded="false">Characters</span>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index.html">Character List</a></li>
+              <li><a class="dropdown-item" href="#">Character Builder</a></li>
+              <li><a class="dropdown-item" href="#">Parties</a></li>
+            </ul>
+          </div>
+
+          <!-- Skills -->
+          <div class="dropdown">
+            <span class="dropdown-label" data-bs-toggle="dropdown" aria-expanded="false">Skills</span>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="skills.html">Skill List</a></li>
+              <li><a class="dropdown-item" href="#">Skill Builder</a></li>
+            </ul>
+          </div>
+
+          <!-- Artes -->
+          <div class="dropdown">
+            <span class="dropdown-label" data-bs-toggle="dropdown" aria-expanded="false">Runes</span>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="runes.html">Runes List</a></li>
+              <li><a class="dropdown-item" href="#">Runes Builder</a></li>
+            </ul>
+          </div>
+
+          <!-- Items -->
+          <div class="dropdown">
+            <span class="dropdown-label" data-bs-toggle="dropdown" aria-expanded="false">Items</span>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="items.html">Item List</a></li>
+              <li><a class="dropdown-item" href="#">Item Builder</a></li>
+              <li><a class="dropdown-item" href="#">Shop List</a></li>
+              <li><a class="dropdown-item" href="#">Shop Builder</a></li>
+            </ul>
+          </div>
+
+          <!-- Story -->
+          <div class="dropdown">
+            <span class="dropdown-label" data-bs-toggle="dropdown" aria-expanded="false">Story</span>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="story.html">Story List</a></li>
+              <li><a class="dropdown-item" href="#">Story Builder</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div id="div_main" class="container-md">
+      <!-- Outer Tabs -->
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" id="skillCore-tab" data-bs-toggle="tab" href="#skillCoreList" role="tab">
+            <img src="media/dice-d20-solid-full.svg" alt="icon_search">
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="skillArte-tab" data-bs-toggle="tab" href="#skillArteList" role="tab">
+            <img src="media/star-solid-full.svg" alt="icon_search">
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="skillBuilder-tab" data-bs-toggle="tab" href="#skillBuilder" role="tab">
+            <img src="media/plus-solid-full.svg" alt="icon_search">
+          </a>
+        </li>
+      </ul>
+
+      <div class="tab-content mt-1">
+        <!-- Core List -->
+        <div class="tab-pane fade show active" id="skillCoreList" role="tabpanel" aria-labelledby="skillCore-tab">
+          <div class="card card-body">
+            <div class="d-flex justify-content-between align-items-end mb-2">
+              <span>Core Skills</span>
+              <div class="dropdown">
+                <span class="dropdown-label" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="media/arrow-down-wide-short-solid-full.svg" alt="icon_users">
+                </span>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="#">Sort A-Z</a></li>
+                  <li><a class="dropdown-item" href="#">Sort Z-A</a></li>
+                  <li><a class="dropdown-item" href="#">Sort by Type</a></li>
+                  <li><a class="dropdown-item" href="#">Sort by Rank</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="row"><!-- Actual Core Skills go here -->
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Skill Artes List -->
+        <div class="tab-pane fade" id="skillArteList" role="tabpanel" aria-labelledby="skillArte-tab">
+          <div class="card card-body">
+            <div class="d-flex justify-content-between align-items-end mb-2">
+              <span>Skill Artes</span>
+              <div class="dropdown">
+                <span class="dropdown-label" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="media/arrow-down-wide-short-solid-full.svg" alt="icon_users">
+                </span>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="#">Sort A-Z</a></li>
+                  <li><a class="dropdown-item" href="#">Sort Z-A</a></li>
+                  <li><a class="dropdown-item" href="#">Sort by Type</a></li>
+                  <li><a class="dropdown-item" href="#">Sort by Rank</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="row"><!-- Actual Core Skills go here -->
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Skill Builder -->
+        <div class="tab-pane fade" id="skillBuilder" role="tabpanel" aria-labelledby="skillBuilder-tab">
+          <div class="card card-body">
+            <div class="d-flex justify-content-between align-items-end mb-2">
+              <span>Skill Builder</span>
+              <div class="dropdown">
+                <span class="dropdown-label" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="media/ellipsis-vertical-solid-full.svg" alt="icon_users">
+                </span>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="#">Save</a></li>
+                  <li><a class="dropdown-item" href="#">View</a></li>
+                  <li><a class="dropdown-item" href="#">Edit</a></li>
+                  <li><a class="dropdown-item" href="#">Delete</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="row"><!-- Actual Vanguard Skills go here -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Floating button -->
+      <button id="floatingBtn" class="btn btn-dark" data-bs-toggle="popover" data-bs-placement="left"
+        data-bs-trigger="focus" data-bs-content="You have unsaved changes.">
+        <img src="media/sia-ooh.png" alt="icon_status">
+      </button>
+    </div>
+  </main>
+  <footer> <!--------------------------------------Footer-->
+    <div id="div_footer" class="container-md">
+      <hr>
+      <figure class="text-center">
+        <figcaption class="figure-caption">
+          <p>&#169; 2025, Korina Joy Olegario</p>
+          <p>Game Developer: LobsterKarian &#8226; Artists: Milluzty</p>
+        </figcaption>
+      </figure>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!--
+		@author Korina Joy Olegario
+    
+    Revolutions, the table-top roleplaying game, is made by Game Developer, LobsterKarian.
+
+		October 01, 2025 | Revolutions Portfolio
+    
+    This is the Characters page.
+	-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Revolutions - Main</title>
+
+  <!--bootstrap links & scripts-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!--java and css link-->
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js" defer></script>
+</head>
+
+<body>
+  <header class="fixed-top">
+    <div id="div_header" class="container-md">
+      <div class="row align-items-center">
+        <div class="col-auto"><!-- Revolutions icon -->
+          <h1 class="mb-0">Revolutions</h1>
+        </div>
+        <div class="col"><!-- Search, Buttons -->
+          <div class="d-flex align-items-center justify-content-end gap-2">
+            <div class="input-group" style="max-width: 250px;">
+              <input type="text" class="form-control" placeholder="Search...">
+              <button type="button" class="btn btn-dark"><img src="media/magnifying-glass-solid-full.svg"
+                  alt="icon_search"></button></button>
+            </div>
+            <!-- First dropdown button with 🕮 -->
+            <div class="dropdown">
+              <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownBook" data-bs-toggle="dropdown"
+                aria-expanded="false"><img src="media/book-solid-full.svg" alt="icon_book"></button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownBook">
+                <li><a class="dropdown-item"
+                    href="https://docs.google.com/document/d/14_VXDTur_AzNXsY99bxCQP14cgT-qN92ukXS3IBouQ8/edit?usp=sharing"
+                    target="_blank" rel="noopener noreferrer">Revolutions Handbook</a></li>
+              </ul>
+            </div>
+
+            <!-- Second dropdown button with ⋮ -->
+            <div class="dropdown">
+              <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMore" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                ⋮
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMore">
+                <li><a class="dropdown-item" href="#">Backup</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><a class="dropdown-item" href="#">Help</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="div_nav" class="row align-items-center">
+        <div class="d-flex justify-content-start w-100">
+          <!-- Characters -->
+          <div class="dropdown">
+            <span class="dropdown-label" data-bs-toggle="dropdown" aria-expanded="false">Characters</span>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index.html">Character List</a></li>
+              <li><a class="dropdown-item" href="#">Character Builder</a></li>
+              <li><a class="dropdown-item" href="#">Parties</a></li>
+            </ul>
+          </div>
+
+          <!-- Skills -->
+          <div class="dropdown">
+            <span class="dropdown-label" data-bs-toggle="dropdown" aria-expanded="false">Skills</span>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="skills.html">Skill List</a></li>
+              <li><a class="dropdown-item" href="#">Skill Builder</a></li>
+            </ul>
+          </div>
+
+          <!-- Artes -->
+          <div class="dropdown">
+            <span class="dropdown-label" data-bs-toggle="dropdown" aria-expanded="false">Runes</span>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="runes.html">Runes List</a></li>
+              <li><a class="dropdown-item" href="#">Runes Builder</a></li>
+            </ul>
+          </div>
+
+          <!-- Items -->
+          <div class="dropdown">
+            <span class="dropdown-label" data-bs-toggle="dropdown" aria-expanded="false">Items</span>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="items.html">Item List</a></li>
+              <li><a class="dropdown-item" href="#">Item Builder</a></li>
+              <li><a class="dropdown-item" href="#">Shop List</a></li>
+              <li><a class="dropdown-item" href="#">Shop Builder</a></li>
+            </ul>
+          </div>
+
+          <!-- Story -->
+          <div class="dropdown">
+            <span class="dropdown-label" data-bs-toggle="dropdown" aria-expanded="false">Story</span>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="story.html">Story List</a></li>
+              <li><a class="dropdown-item" href="#">Story Builder</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div id="div_main" class="container-md">
+      <!-- Outer Tabs -->
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" id="list-tab" data-bs-toggle="tab" href="#characterList" role="tab">
+            <img src="media/list-solid-full.svg" alt="icon_search">
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="builder-tab" data-bs-toggle="tab" href="#characterBuilder" role="tab">
+            <img src="media/user-plus-solid-full.svg" alt="icon_plus">
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="party-tab" data-bs-toggle="tab" href="#characterParty" role="tab">
+            <img src="media/users-solid-full.svg" alt="icon_users">
+          </a>
+        </li>
+      </ul>
+
+      <div class="tab-content mt-1">
+        <!-- Character List -->
+        <div class="tab-pane fade show active" id="characterList" role="tabpanel" aria-labelledby="list-tab">
+          <div class="card card-body">
+            <div class="d-flex justify-content-between align-items-end mb-2">
+              <span>Characters</span>
+              <div class="dropdown">
+                <span class="dropdown-label" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="media/arrow-down-wide-short-solid-full.svg" alt="icon_users">
+                </span>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="#">Sort A-Z</a></li>
+                  <li><a class="dropdown-item" href="#">Sort Z-A</a></li>
+                  <li><a class="dropdown-item" href="#">Sort by Level</a></li>
+                  <li><a class="dropdown-item" href="#">Sort by Story</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="row"><!-- Actual Characters -->
+              <!-- TIGER -->
+              <div class="character-card card bg-dark text-white">
+                <img src="media/pc-tiger.jpg" class="card-img" alt="character-tiger">
+                <!-- Overlay with flex layout -->
+                <div class="card-img-overlay d-flex flex-column justify-content-end">
+                  <div class="d-flex justify-content-between align-items-end">
+                    <div>
+                      <h5 class="card-title mb-0">Crouching Tiger</h5>
+                      <p class="card-text mb-0">Platina Marshall</p>
+                    </div>
+                    <!-- Dropdown at bottom right -->
+                    <div class="dropdown character-options">
+                      <span class="character-dropdown-label" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="media/ellipsis-vertical-solid-full.svg" alt="icon_settings">
+                      </span>
+                      <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#">Edit</a></li>
+                        <li><a class="dropdown-item" href="#">Copy</a></li>
+                        <li><a class="dropdown-item" href="#">Add to Party</a></li>
+                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ADAM -->
+              <div class="character-card card bg-dark text-white">
+                <img src="media/pc-adam.jpg" class="card-img" alt="character-tiger">
+                <!-- Overlay with flex layout -->
+                <div class="card-img-overlay d-flex flex-column justify-content-end">
+                  <div class="d-flex justify-content-between align-items-end">
+                    <div>
+                      <h5 class="card-title mb-0">Adam Dallas Bouvet</h5>
+                      <p class="card-text mb-0">Gold Tracker</p>
+                    </div>
+                    <!-- Dropdown at bottom right -->
+                    <div class="dropdown character-options">
+                      <span class="character-dropdown-label" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="media/ellipsis-vertical-solid-full.svg" alt="icon_settings">
+                      </span>
+                      <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#">Edit</a></li>
+                        <li><a class="dropdown-item" href="#">Copy</a></li>
+                        <li><a class="dropdown-item" href="#">Add to Party</a></li>
+                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Character Builder with Nested Tabs -->
+        <div class="tab-pane fade" id="characterBuilder" role="tabpanel" aria-labelledby="builder-tab">
+          <div class="card card-body">
+            <!-- Builder nested tabs -->
+            <div class="nested-tabs">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <!-- Tabs on left -->
+                <ul class="nav nav-tabs mb-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="characterBuilder-identity-tab" data-bs-toggle="tab"
+                      href="#characterBuilder-identity" role="tab">ID</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="characterBuilder-growth-tab" data-bs-toggle="tab"
+                      href="#characterBuilder-growth" role="tab">Growth</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="characterBuilder-skills-tab" data-bs-toggle="tab"
+                      href="#characterBuilder-skills" role="tab">Skills</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="characterBuilder-artes-tab" data-bs-toggle="tab"
+                      href="#characterBuilder-artes" role="tab">Runes</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="characterBuilder-gear-tab" data-bs-toggle="tab"
+                      href="#characterBuilder-gear" role="tab">Gear</a>
+                  </li>
+                </ul>
+
+                <!-- Dropdown aligned to right -->
+                <div class="dropdown">
+                  <span class="dropdown-label" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="media/ellipsis-vertical-solid-full.svg" alt="icon_users">
+                  </span>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="#">Save</a></li>
+                    <li><a class="dropdown-item" href="#">View</a></li>
+                    <li><a class="dropdown-item" href="#">Print</a></li>
+                    <li><a class="dropdown-item" href="#">Delete</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <!--  This tab-content wraps *all* nested panes -->
+              <div class="tab-content mt-3">
+                <!-- IDENTITY -->
+                <div class="tab-pane fade show active" id="characterBuilder-identity" role="tabpanel"
+                  aria-labelledby="characterBuilder-identity-tab">
+
+                  <!-- Profile -->
+                  <div class="row">
+                    <div class="card text-center">
+                      <div class="card-header">
+                        Profile
+                      </div>
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-auto">
+                            <div class="input-group">
+                              <input type="file" class="d-none" id="inputGroupFile04" accept="image/*">
+                              <label for="inputGroupFile04" class="btn btn-outline-dark">
+                                <img src="media/image-solid-full.svg" alt="Upload Image">
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <input type="text" class="newCharacter-name" placeholder="New name..."
+                              aria-label="Charactername">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Traits -->
+                  <div class="row">
+                    <div class="card text-center">
+                      <div class="card-header">
+                        Traits
+                      </div>
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-auto">
+                            Add a trait
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Flaws -->
+                  <div class="row">
+                    <div class="card text-center">
+                      <div class="card-header">
+                        Flaws
+                      </div>
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-auto">
+                            Add a flaw
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <!-- GROWTH -->
+                <div class="tab-pane fade" id="characterBuilder-growth" role="tabpanel"
+                  aria-labelledby="characterBuilder-growth-tab">
+                  <form>
+
+                    <div class="row">
+                      <div class="card text-center">
+                        <div class="card-header">
+                          Select Growth
+                        </div>
+                        <div class="card-body">
+                          <div class="growth-radio-btns">
+                            <!--Growth Radio buttons-->
+                            <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off">
+                            <label class="btn btn-secondary" for="option1"><img src="media/growth-adept.png"
+                                alt="growth-adept">Adept</label>
+                            <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                            <label class="btn btn-secondary" for="option2"><img src="media/growth-artisan.png"
+                                alt="growth-artisan">Artisan</label>
+                            <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                            <label class="btn btn-secondary" for="option3"><img src="media/growth-marshall.png"
+                                alt="growth-marshall">Marshall</label>
+                            <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
+                            <label class="btn btn-secondary" for="option4"><img src="media/growth-performer.png"
+                                alt="growth-performer">Performer</label>
+                            <input type="radio" class="btn-check" name="options" id="option5" autocomplete="off">
+                            <label class="btn btn-secondary" for="option5"><img src="media/growth-tracker.png"
+                                alt="growth-tracker">Tracker</label>
+                            <input type="radio" class="btn-check" name="options" id="option6" autocomplete="off">
+                            <label class="btn btn-secondary" for="option6"><img src="media/growth-wanderer.png"
+                                alt="growth-wanderer">Wanderer</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="card text-center">
+                        <div class="card-header">
+                          Select Rank
+                        </div>
+                        <div class="card-body">
+                          <!-- Select row -->
+                          <div class="row mb-2">
+                            <div class="col">
+                              <select id="rank" class="form-select form-select-sm" aria-label="rank">
+                                <option selected>Bronze</option>
+                                <option value="1">Steel</option>
+                                <option value="2">Gold</option>
+                                <option value="3">Platina</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="card text-center">
+                        <div class="card-header">
+                          Select Attributes
+                        </div>
+                        <div class="card-body">
+                          <!-- Select row -->
+                          <div class="row mb-2">
+                            <div class="col">
+                              <select id="strength" class="form-select form-select-sm" aria-label="str">
+                                <option selected>d4</option>
+                                <option value="1">d6</option>
+                                <option value="2">d8</option>
+                                <option value="3">d10</option>
+                                <option value="4">d12</option>
+                              </select>
+                            </div>
+                            <div class="col">
+                              <select id="dexterity" class="form-select form-select-sm" aria-label="dex">
+                                <option selected>d4</option>
+                                <option value="1">d6</option>
+                                <option value="2">d8</option>
+                                <option value="3">d10</option>
+                                <option value="4">d12</option>
+                              </select>
+                            </div>
+                            <div class="col">
+                              <select id="intelligence" class="form-select form-select-sm" aria-label="int">
+                                <option selected>d4</option>
+                                <option value="1">d6</option>
+                                <option value="2">d8</option>
+                                <option value="3">d10</option>
+                                <option value="4">d12</option>
+
+                              </select>
+                            </div>
+                            <div class="col">
+                              <select id="soul" class="form-select form-select-sm" aria-label="sol">
+                                <option selected>d4</option>
+                                <option value="1">d6</option>
+                                <option value="2">d8</option>
+                                <option value="3">d10</option>
+                                <option value="4">d12</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <!-- Labels row -->
+                          <div class="row text-center">
+                            <div class="col">Str</div>
+                            <div class="col">Dex</div>
+                            <div class="col">Int</div>
+                            <div class="col">Sol</div>
+                          </div>
+                          <!-- Rating row -->
+                          <div class="row text-center">
+                            <div class="col">1</div>
+                            <div class="col">1</div>
+                            <div class="col">1</div>
+                            <div class="col">1</div>
+                          </div>
+                          <hr>
+                          <!-- Secondary attributes row I-->
+                          <div class="row text-center">
+                            <div class="col">Hp: </div>
+                            <div class="col">C-Hp: </div>
+                            <div class="col">Sp: </div>
+                          </div>
+                          <!-- Secondary attributes row II-->
+                          <div class="row text-center">
+                            <div class="col">Tp: </div>
+                            <div class="col">Pot: </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="card text-center">
+                        <div class="card-header">
+                          Select Features
+                        </div>
+                        <div class="card-body">
+                          <div class="growth-features" data-bs-spy="scroll" data-bs-offset="0" tabindex="0">
+                            <!--Growth features-->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="card text-center">
+                        <div class="card-header">
+                          Growth Abilities
+                        </div>
+                        <div class="card-body">
+                          <div class="growth-abilities" data-bs-spy="scroll" data-bs-offset="0" tabindex="0">
+                            <!--Growth abilities-->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+                  </form>
+                </div>
+
+                <!-- SKILLS -->
+                <div class="tab-pane fade" id="characterBuilder-skills" role="tabpanel"
+                  aria-labelledby="characterBuilder-skills-tab">
+                  Skill selection.
+                </div>
+
+                <!-- ARTES -->
+                <div class="tab-pane fade" id="characterBuilder-artes" role="tabpanel"
+                  aria-labelledby="characterBuilder-artes-tab">
+                  Artes selection.
+                </div>
+
+                <!-- GEAR -->
+                <div class="tab-pane fade" id="characterBuilder-gear" role="tabpanel"
+                  aria-labelledby="characterBuilder-gear-tab">
+                  Inventory list.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Parties -->
+        <div class="tab-pane fade" id="characterParty" role="tabpanel" aria-labelledby="party-tab">
+          <div class="card card-body">
+            <div class="d-flex justify-content-between align-items-end mb-2">
+              <span>Parties</span>
+              <div class="dropdown">
+                <span class="dropdown-label" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="media/arrow-down-wide-short-solid-full.svg" alt="icon_users">
+                </span>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="#">Sort A-Z</a></li>
+                  <li><a class="dropdown-item" href="#">Sort Z-A</a></li>
+                  <li><a class="dropdown-item" href="#">Sort by Level</a></li>
+                  <li><a class="dropdown-item" href="#">Sort by Story</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="row"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Floating button -->
+      <button id="floatingBtn" class="btn btn-dark" data-bs-toggle="popover" data-bs-placement="left"
+        data-bs-trigger="focus" data-bs-content="You have unsaved changes.">
+        <img src="media/sia-ooh.png" alt="icon_status">
+      </button>
+    </div>
+  </main>
+  <footer> <!--------------------------------------Footer-->
+    <div id="div_footer" class="container-md">
+      <hr>
+      <figure class="text-center">
+        <figcaption class="figure-caption">
+          <p>&#169; 2025, Korina Joy Olegario</p>
+          <p>Game Developer: LobsterKarian &#8226; Artists: Milluzty</p>
+        </figcaption>
+      </figure>
+    </div>
+  </footer>
+</body>
+
+</html>
