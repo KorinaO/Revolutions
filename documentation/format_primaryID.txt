@@ -1,5 +1,6 @@
-/**REVOLUTIONS ID CHANGELOG !!IMPORTANT!!**/
+/**REVOLUTIONS ID CHANGELOG !!IMPORTANT!! MUST ALWAYS EDIT THIS**/
 Last editor: Korina
+Last edit date: 2025-10-09
 Changelog notes: Created object id format. For LobsterKarian's review.
 
 
@@ -17,16 +18,16 @@ RevVersion:
 
 /**PRIMARY ID LEGEND: OBJECT TYPE**/
 Table of Contents:
-000-009 Classes
-010-019 Skills
-020-029 Runes
-030-039 Items:Consumables
-040-049 Items:Wearables
-050-059 Items: Materials
-060-99 (Unassigned. Reserved for System Objects)
+000 to 009 Classes
+010 to 019 Skills
+020 to 029 Runes
+030 to 039 Items: Consumables
+040 to 049 Items: Equipment
+050 to 059 Items: Materials
+060 to 99 (Unassigned. Reserved for System Objects)
 (Notes: 100 and above is for User Objects. High error rate. These are subject to multiple edits, deletions, creation, deprecation.)
-100 - Story: Odyssey
-102 - Story: Sirius
+100 Story: Odyssey
+102 Story: Sirius
 
 
 ObjectType: 000 - Classes
@@ -126,7 +127,7 @@ ObjectType: 024 - Runes: Wind
 
 ObjectType: 025-029 (Notes: Reserved for Runes like Mystic Artes and Abilities)
 
-ObjectType: 030 - Items: Consumable: Restore
+ObjectType: 030 - Items: Consumables: Restore
 	ObjectSubType: 001 - ?
 		PersonalId: 0000 - ?
 		PersonalId: 0001 - ?
@@ -134,7 +135,7 @@ ObjectType: 030 - Items: Consumable: Restore
 	ObjectSubType: 003 - ?
 	ObjectSubType: 004 - ?
 
-ObjectType: 031 - Items: Consumable: Special Effects
+ObjectType: 031 - Items: Consumables: Special Effects
 	ObjectSubType: 001 - Coatings
 		PersonalId: 0000 - Anti-Ley Coating
 		PersonalId: 0001 - Cracker Rounds
@@ -142,7 +143,7 @@ ObjectType: 031 - Items: Consumable: Special Effects
 	ObjectSubType: 003 - ?
 	ObjectSubType: 004 - ?
 
-ObjectType: 032 - Items: Consumable: Throwable
+ObjectType: 032 - Items: Consumables: Throwable
 	ObjectSubType: 001 - ?
 		PersonalId: 0000 - ?
 		PersonalId: 0001 - ?
@@ -150,7 +151,7 @@ ObjectType: 032 - Items: Consumable: Throwable
 	ObjectSubType: 003 - ?
 	ObjectSubType: 004 - ?
 
-ObjectType: 033 - Items: Consumable: Traps
+ObjectType: 033 - Items: Consumables: Traps
 	ObjectSubType: 001 - ?
 		PersonalId: 0000 - ?
 		PersonalId: 0001 - ?
@@ -160,7 +161,7 @@ ObjectType: 033 - Items: Consumable: Traps
 
 ObjectType: 034-039 (Notes: Reserved for Consumables)
 
-ObjectType: 040 - Items: Wearable: Accessories
+ObjectType: 040 - Items: Equipment: Accessories
 	ObjectSubType: 001 - ?
 		PersonalId: 0000 - ?
 		PersonalId: 0001 - ?
@@ -168,7 +169,7 @@ ObjectType: 040 - Items: Wearable: Accessories
 	ObjectSubType: 003 - ?
 	ObjectSubType: 004 - ?
 
-ObjectType: 041 - Items: Wearable: Armor
+ObjectType: 041 - Items: Equipment: Armor
 	ObjectSubType: 001 - ?
 		PersonalId: 0000 - ?
 		PersonalId: 0001 - ?
@@ -176,7 +177,7 @@ ObjectType: 041 - Items: Wearable: Armor
 	ObjectSubType: 003 - ?
 	ObjectSubType: 004 - ?
 
-ObjectType: 042 - Items: Wearable: Tools
+ObjectType: 042 - Items: Equipment: Tools
 	ObjectSubType: 001 - ?
 		PersonalId: 0000 - ?
 		PersonalId: 0001 - ?
@@ -184,7 +185,7 @@ ObjectType: 042 - Items: Wearable: Tools
 	ObjectSubType: 003 - ?
 	ObjectSubType: 004 - ?
 
-ObjectType: 043 - Items: Wearable: Weapons
+ObjectType: 043 - Items: Equipment: Weapons
 	ObjectSubType: 001 - ?
 		PersonalId: 0000 - ?
 		PersonalId: 0001 - ?

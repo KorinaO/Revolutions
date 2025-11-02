@@ -7,7 +7,9 @@
     
     Revolutions, the table-top roleplaying game, is made by Game Developer, LobsterKarian.
 
-		October 01, 2025 | Revolutions Portfolio	
+		October 01, 2025 | Revolutions Portfolio
+    
+    This is the Characters page.
 	-->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -70,7 +72,7 @@
           <div class="dropdown">
             <span class="dropdown-label" data-bs-toggle="dropdown" aria-expanded="false">Characters</span>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Character List</a></li>
+              <li><a class="dropdown-item" href="index.html">Character List</a></li>
               <li><a class="dropdown-item" href="#">Character Builder</a></li>
               <li><a class="dropdown-item" href="#">Parties</a></li>
             </ul>
@@ -80,17 +82,17 @@
           <div class="dropdown">
             <span class="dropdown-label" data-bs-toggle="dropdown" aria-expanded="false">Skills</span>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Skill List</a></li>
+              <li><a class="dropdown-item" href="skills.html">Skill List</a></li>
               <li><a class="dropdown-item" href="#">Skill Builder</a></li>
             </ul>
           </div>
 
           <!-- Artes -->
           <div class="dropdown">
-            <span class="dropdown-label" data-bs-toggle="dropdown" aria-expanded="false">Artes</span>
+            <span class="dropdown-label" data-bs-toggle="dropdown" aria-expanded="false">Runes</span>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Artes List</a></li>
-              <li><a class="dropdown-item" href="#">Artes Builder</a></li>
+              <li><a class="dropdown-item" href="runes.html">Runes List</a></li>
+              <li><a class="dropdown-item" href="#">Runes Builder</a></li>
             </ul>
           </div>
 
@@ -98,7 +100,7 @@
           <div class="dropdown">
             <span class="dropdown-label" data-bs-toggle="dropdown" aria-expanded="false">Items</span>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Item List</a></li>
+              <li><a class="dropdown-item" href="items.html">Item List</a></li>
               <li><a class="dropdown-item" href="#">Item Builder</a></li>
               <li><a class="dropdown-item" href="#">Shop List</a></li>
               <li><a class="dropdown-item" href="#">Shop Builder</a></li>
@@ -109,7 +111,7 @@
           <div class="dropdown">
             <span class="dropdown-label" data-bs-toggle="dropdown" aria-expanded="false">Story</span>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Story List</a></li>
+              <li><a class="dropdown-item" href="story.html">Story List</a></li>
               <li><a class="dropdown-item" href="#">Story Builder</a></li>
             </ul>
           </div>
@@ -132,7 +134,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="parties-tab" data-bs-toggle="tab" href="#characterParties" role="tab">
+          <a class="nav-link" id="party-tab" data-bs-toggle="tab" href="#characterParty" role="tab">
             <img src="media/users-solid-full.svg" alt="icon_users">
           </a>
         </li>
@@ -143,7 +145,7 @@
         <div class="tab-pane fade show active" id="characterList" role="tabpanel" aria-labelledby="list-tab">
           <div class="card card-body">
             <div class="d-flex justify-content-between align-items-end mb-2">
-              <span>Character List</span>
+              <span>Characters</span>
               <div class="dropdown">
                 <span class="dropdown-label" data-bs-toggle="dropdown" aria-expanded="false">
                   <img src="media/arrow-down-wide-short-solid-full.svg" alt="icon_users">
@@ -166,11 +168,11 @@
                   <div class="d-flex justify-content-between align-items-end">
                     <div>
                       <h5 class="card-title mb-0">Crouching Tiger</h5>
-                      <p class="card-text mb-0">Marshall 18</p>
+                      <p class="card-text mb-0">Platina Marshall</p>
                     </div>
                     <!-- Dropdown at bottom right -->
                     <div class="dropdown character-options">
-                      <span class="dropdown-label" data-bs-toggle="dropdown" aria-expanded="false">
+                      <span class="character-dropdown-label" data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="media/ellipsis-vertical-solid-full.svg" alt="icon_settings">
                       </span>
                       <ul class="dropdown-menu dropdown-menu-end">
@@ -191,11 +193,11 @@
                   <div class="d-flex justify-content-between align-items-end">
                     <div>
                       <h5 class="card-title mb-0">Adam Dallas Bouvet</h5>
-                      <p class="card-text mb-0">Tracker 15</p>
+                      <p class="card-text mb-0">Gold Tracker</p>
                     </div>
                     <!-- Dropdown at bottom right -->
                     <div class="dropdown character-options">
-                      <span class="dropdown-label" data-bs-toggle="dropdown" aria-expanded="false">
+                      <span class="character-dropdown-label" data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="media/ellipsis-vertical-solid-full.svg" alt="icon_settings">
                       </span>
                       <ul class="dropdown-menu dropdown-menu-end">
@@ -217,45 +219,46 @@
         <!-- Character Builder with Nested Tabs -->
         <div class="tab-pane fade" id="characterBuilder" role="tabpanel" aria-labelledby="builder-tab">
           <div class="card card-body">
-            <div class="row">
-              <div class="col">
-                <!-- Builder Buttons-->
-                <div class="buttons-builder">
-                  <button type="button" class="btn btn-dark"><img src="media/trash-solid-full.svg"
-                      alt="icon_delete character"></button>
-                  <button type="button" class="btn btn-dark"><img src="media/print-solid-full.svg"
-                      alt="icon_view character"></button>
-                  <button type="button" class="btn btn-dark"><img src="media/eye-solid-full.svg"
-                      alt="icon_view character"></button>
-                  <button type="button" class="btn btn-dark"><img src="media/floppy-disk-solid-full.svg"
-                      alt="icon_add character"></button>
-                </div>
-              </div>
-            </div>
             <!-- Builder nested tabs -->
             <div class="nested-tabs">
-              <ul class="nav nav-tabs">
-                <li class="nav-item">
-                  <a class="nav-link active" id="characterBuilder-identity-tab" data-bs-toggle="tab"
-                    href="#characterBuilder-identity" role="tab">Identity</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" id="characterBuilder-growth-tab" data-bs-toggle="tab"
-                    href="#characterBuilder-growth" role="tab">Growth</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" id="characterBuilder-skills-tab" data-bs-toggle="tab"
-                    href="#characterBuilder-skills" role="tab">Skills</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" id="characterBuilder-artes-tab" data-bs-toggle="tab"
-                    href="#characterBuilder-artes" role="tab">Artes</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" id="characterBuilder-gear-tab" data-bs-toggle="tab" href="#characterBuilder-gear"
-                    role="tab">Gear</a>
-                </li>
-              </ul>
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <!-- Tabs on left -->
+                <ul class="nav nav-tabs mb-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="characterBuilder-identity-tab" data-bs-toggle="tab"
+                      href="#characterBuilder-identity" role="tab">ID</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="characterBuilder-growth-tab" data-bs-toggle="tab"
+                      href="#characterBuilder-growth" role="tab">Growth</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="characterBuilder-skills-tab" data-bs-toggle="tab"
+                      href="#characterBuilder-skills" role="tab">Skills</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="characterBuilder-artes-tab" data-bs-toggle="tab"
+                      href="#characterBuilder-artes" role="tab">Runes</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="characterBuilder-gear-tab" data-bs-toggle="tab"
+                      href="#characterBuilder-gear" role="tab">Gear</a>
+                  </li>
+                </ul>
+
+                <!-- Dropdown aligned to right -->
+                <div class="dropdown">
+                  <span class="dropdown-label" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="media/ellipsis-vertical-solid-full.svg" alt="icon_users">
+                  </span>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="#">Save</a></li>
+                    <li><a class="dropdown-item" href="#">View</a></li>
+                    <li><a class="dropdown-item" href="#">Print</a></li>
+                    <li><a class="dropdown-item" href="#">Delete</a></li>
+                  </ul>
+                </div>
+              </div>
 
               <!--  This tab-content wraps *all* nested panes -->
               <div class="tab-content mt-3">
@@ -367,8 +370,8 @@
                               <select id="rank" class="form-select form-select-sm" aria-label="rank">
                                 <option selected>Bronze</option>
                                 <option value="1">Steel</option>
-                                <option value="2">Patina</option>
-                                <option value="3">Gold</option>
+                                <option value="2">Gold</option>
+                                <option value="3">Platina</option>
                               </select>
                             </div>
                           </div>
@@ -506,10 +509,10 @@
         </div>
 
         <!-- Parties -->
-        <div class="tab-pane fade" id="characterParties" role="tabpanel" aria-labelledby="parties-tab">
+        <div class="tab-pane fade" id="characterParty" role="tabpanel" aria-labelledby="party-tab">
           <div class="card card-body">
             <div class="d-flex justify-content-between align-items-end mb-2">
-              <span>Parties List</span>
+              <span>Parties</span>
               <div class="dropdown">
                 <span class="dropdown-label" data-bs-toggle="dropdown" aria-expanded="false">
                   <img src="media/arrow-down-wide-short-solid-full.svg" alt="icon_users">

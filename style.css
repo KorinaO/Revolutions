@@ -106,7 +106,7 @@ main {
 
 /* Nested tabs Dropdown label icons */
 .dropdown-label img {
-  filter: brightness(0) invert(1);
+  filter: brightness(0) saturate(100%) invert(50%) sepia(0%) saturate(0%) hue-rotate(0deg);
   width: 25px;
   height: 25px;
 }
@@ -158,7 +158,7 @@ input.newCharacter-name {
   gap: 1rem;   
   border-bottom: none;             /* Remove default border */
   padding: 0;                      /* Remove padding */
-  margin: 10px 0px 0px 0px;         
+  margin: 0px;         
   width: 100%;                     /* Full width */
   list-style: none;                /* Remove bullets */
 }
@@ -166,7 +166,7 @@ input.newCharacter-name {
 .nested-tabs .nav-link {
   display: block;                  /* Full clickable area */
   width: 100%;                     /* Stretch to fill flex item */
-  padding: 0.5rem 0;               /* Only vertical padding */
+  padding: 0.1rem 0;               /* Only vertical padding */
   border: none;                    /* Remove border */
   background: transparent;         /* Transparent background */
   color: #aaa;                     /* Inactive tab color */
@@ -268,4 +268,10 @@ cursor: pointer;
   object-fit: cover;
   height: 200px;
   width: 100%;
+}
+
+.character-dropdown-label img {
+  filter: brightness(0) invert(1);
+  width: 25px;
+  height: 25px;
 }
